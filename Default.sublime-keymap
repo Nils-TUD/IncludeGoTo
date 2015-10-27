@@ -1,0 +1,6 @@
+[
+  {
+    "command": "include_goto",
+    "keys": ["f12"]
+  }
+]

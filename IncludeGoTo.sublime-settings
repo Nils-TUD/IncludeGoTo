@@ -1,0 +1,8 @@
+{
+    // the keys in view.settings().get() to retrieve the -I parameters from. for example, for
+    // clang-complete, use "cc_include_options" and for SublimeClang, use "sublimeclang_options".
+    "include_options": ["cc_include_options"],
+
+    // the command that is executed if the plugin can't handle it
+    "fallback_command": "clang_goto_def"
+}
