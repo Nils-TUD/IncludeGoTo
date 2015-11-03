@@ -46,6 +46,10 @@ class include_goto(sublime_plugin.TextCommand):
 
     # note the underscore
     def run_(self, id, args):
+        # if this is called due a mouse event, put the cursor to the mouse position
+        if args != None and 'event' in args:
+            self.view.run_command("drag_select", args)
+
         if self.goto_include() == False:
             settings = sublime.load_settings("IncludeGoTo.sublime-settings")
             fallback = settings.get("fallback_command", "")
